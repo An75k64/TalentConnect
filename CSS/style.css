@@ -7,6 +7,10 @@
 
 }
 
+a {
+    text-decoration: none;
+}
+
 html, body{
   height: 100%;
   width: 100%;
@@ -15,7 +19,7 @@ html, body{
 #cursor {
   height: 20px;
   width: 20px;
-  background-color: #95c11e;
+  background-color: #AEC6CF;
   border-radius: 50%;
   position: fixed;
   z-index: 99;
@@ -50,7 +54,7 @@ html, body{
   width: 4vw;
 }
 #nav h4 {
-  text-transform: uppercase;
+  
   font-weight: 500;
   cursor: pointer;
   font-size: 1.15vw;
@@ -69,7 +73,7 @@ video {
   background-color: rgba(0, 0, 0, 0.39);
 }
 
-#page1 {
+#home {
   height: 100vh;
   width: 100%;
   position: relative;
@@ -80,12 +84,15 @@ video {
   text-align: center;
   z-index: 10;
 }
-#page1 h1 {
+#home h1 {
   font-size: 5vw;
   font-weight: 900;
   position: relative;
+  margin-top: 250px;
+  margin-bottom: 50px;
+  
 }
-#page1 h1::before {
+#home h1::before {
   content: "CAMPUS TO CUBICLE";
   position: absolute;
   color: #000;
@@ -94,19 +101,20 @@ video {
   -webkit-text-stroke: 1.5px #95c11e;
   z-index: -1;
 }
-#page1 h2 {
+#home h2 {
   font-size: 30px;
   font-weight: 800;
   margin-top: 10px;
   margin-bottom: 20px;
 }
-#page1 p {
+#home p {
   font-size: 1.2vw;
   font-weight: 500;
   width: 40%;
+  margin-bottom: 150px;
 }
 
-#page2 {
+#aboutus {
   min-height: 100vh;
   width: 100%;
   z-index: 10;
@@ -119,6 +127,7 @@ video {
   overflow-y: hidden;
   position: relative;
   z-index: 10;
+  margin-bottom: 100px;
 }
 #scroller::-webkit-scrollbar {
   display: none;
@@ -154,4 +163,104 @@ video {
   to {
     transform: translateX(-100%);
   }
+}
+
+#about-us {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+#about-us img {
+  height: 220px;
+  width: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+#about-us-in {
+  width: 50%;
+  text-align: center;
+}
+#about-us-in h3 {
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+#about-us-in p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#cards-container {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+}
+.card {
+  height: 80%;
+  width: 24%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+}
+#card1 {
+  background-image: url(https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#card2 {
+  background-image: url(https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=1778&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#card3 {
+  background-image: url(https://b2821498.smushcdn.com/2821498/wp-content/uploads/2019/01/Top-60-Employee-Engagement-image43.png?lossy=2&strip=1&webp=1);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  padding: 30px;
+  padding-top: 100px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+.overlay h4 {
+  color: #000;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 800;
+  
+}
+.overlay p {
+  color: #000;
+  font-size: 18px;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.card:hover{
+  transform: rotate3d(-1,1,0,20deg);
+}
+
+#footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+#footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
 }
